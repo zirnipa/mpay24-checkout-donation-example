@@ -6,38 +6,38 @@
  * @license http://ec.europa.eu/idabc/eupl.html EUPL, Version 1.1
  */-->
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
- <body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Spenden</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
     <div id="container">
-        <div class="spende span6">
+      <div class="spende span6">
         <form method="post" action="pay.php">
-                <label>Wieviel m&ouml;chten Sie spenden?</label>
-                    <select name="amount" required;>
-                    <option value="1.00">1 Euro
-                        <option value="10.00">10 Euro
-                        <option value="50.00">50 Euro
-                        <option value="100.00">100 Euro
-                        <option value="500.00">500 Euro
-                    </select>
-                    <label>NAME</label>
-                    <input name="name" type="text" required>
-                    <label>ANSCHRIFT</label>
-                    <input name="street" type="text" required>
-                    <label>PLZ</label>
-                    <input name="zip" type="text" required>
-                    <label>ORT</label>
-                    <input name="city" type="text" required>
-                    <label>E-MAIL</label>
-                    <input name="email" type="email" required>
+          <label>Wieviel m&ouml;chten Sie spenden?</label>
+          <select name="amount" required;>
+            <option value="1.00">1 Euro</option>
+            <option value="10.00">10 Euro</option>
+            <option value="50.00">50 Euro</option>
+            <option value="100.00">100 Euro</option>
+            <option value="500.00">500 Euro</option>
+          </select>
+          <label>NAME</label>
+          <input name="name" type="text" required>
+          <label>ANSCHRIFT</label>
+          <input name="street" type="text" required>
+          <label>PLZ</label>
+          <input name="zip" type="text" required>
+          <label>ORT</label>
+          <input name="city" type="text" required>
+          <label>E-MAIL</label>
+          <input name="email" type="email" required>
 
-                <input name="submitPay" type="submit" value="spenden" />
+          <input name="submitPay" type="submit" value="spenden" />
         </form>
-        </div>
+      </div>
     </div>
- </body>
+  </body>
 </html>

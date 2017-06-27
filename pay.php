@@ -1,9 +1,12 @@
 <?php
-  include_once ("lib/MPAY24.php");
-  
-  $shop = new MPAY24();
+require("bootstrap.php");
 
-  $mdxi = new ORDER();
+use Mpay24\Mpay24Order;
+use Mpay24\Mpay24;
+
+$mpay24 = new Mpay24();
+
+  $mdxi = new Mpay24Order();
   $rand = rand(1, 99999999999);
   $mdxi->Order->Tid = $rand;
   
@@ -31,5 +34,5 @@
   $mdxi->Order->URL->Confirmation = substr($_SERVER['HTTP_REFERER'], 0, strrpos($_SERVER['HTTP_REFERER'], '/')) . "/confirm.php?token=";
   $mdxi->Order->URL->Cancel = substr($_SERVER['HTTP_REFERER'], 0, strrpos($_SERVER['HTTP_REFERER'], '/')) . "/index.php";
 
-  header('Location: '.$shop->selectPayment($mdxi)->location);
+  header("Location: " . $mpay24->paymentPage($mdxi)->getLocation());
 ?>
